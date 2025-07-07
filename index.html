@@ -4,17 +4,86 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>Pets</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
-<body>
-    <h1>Hello, world!</h1>
+<body class="bg-pets min-vh-100">
+
+    <header>
+        <h1 class="text-center mt-5 text-uppercase fw-bold">Esercizio Pets</h1>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="row justify-content-center mt-5">
+                <div class="col col-12 col-md-6">
+                    <form id="pets-form">
+                        <!--Nome Animale-->
+                        <div class="mb-4 text-center">
+                            <label for="petName" class="form-label text-white fs-4 fw-bold text-uppercase">Nome</label>
+                            <input type="text" placeholder="Inserisci il nome dell'animale" maxlength="25"
+                                class="form-control rounded-5" id="petName" aria-describedby="emailHelp" required>
+                        </div>
+                        <!--Nome Animale-->
+                        <div class="mb-4 text-center">
+                            <label for="ownerName" class="form-label text-white fs-4 fw-bold text-uppercase">Nome
+                                Proprietario</label>
+                            <input type="text" placeholder="Inserisci il nome del proprietario" maxlength="25"
+                                class="form-control rounded-5" id="ownerName" aria-describedby="emailHelp" required>
+                        </div>
+                        <!--Specie-->
+                        <div class="mb-4 text-center">
+                            <label for="species"
+                                class="form-label text-white fs-4 fw-bold text-uppercase">Specie</label>
+                            <select id="species" class="form-select rounded-5">
+                                <!--option generato dal js-->
+                            </select>
+                        </div>
+                        <!--Razza-->
+                        <div class="mb-4 text-center">
+                            <label for="breed" class="form-label text-white fs-4 fw-bold text-uppercase">Razza</label>
+                            <select id="breed" class="form-select rounded-5">
+                                <!--option generato dal js-->
+                            </select>
+                        </div>
+                        <!--Pulsante-->
+                        <div class="d-flex justify-content-center">
+                            <button type="submit" class="btn btn-outline-dark rounded-5">Conferma</button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-12">
+                    <!--Tabella pets-->
+                    <table class="table invisible" id="pets-table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Nome</th>
+                                <th scope="col">Proprietario</th>
+                                <th scope="col">Specie</th>
+                                <th scope="col">Razza</th>
+                            </tr>
+                        </thead>
+                        <tbody id="pets-table-body">
+                            <!--generato dal js-->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
         crossorigin="anonymous"></script>
     <script src="./js/user.js"></script>
+    <script src="./js/pet.js"></script>
 </body>
 
 </html>
